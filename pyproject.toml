@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "codespaces-python-poetry"
+name = "mock-data"
 version = "0.0.1"
-description = "A Python template for Codespaces"
+description = ""
 authors = ["Stephen Titcombe <40187876+stitcombe@users.noreply.github.com>"]
 readme = "README.md"
-packages = [{include = "codespaces_python_poetry"}]
+packages = [{include = "src/mock_data"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -18,8 +18,21 @@ nox = "^2022.11.21"
 ruff = "^0.0.262"
 bandit = "^1.7.5"
 safety = "^2.3.5"
+pandas = "^2.0.0"
+pytest-cov = "^4.0.0"
 
+[tool.poetry.scripts]
+app = 'scripts:app'
+test = 'scripts:test'
+lint = 'scripts:lint'
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--cov",
+    "--import-mode=importlib",
+]
+pythonpath = "src"
