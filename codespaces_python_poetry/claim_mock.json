@@ -1,20 +1,62 @@
-{
-    "claim":{
-        "claimNumber": "219233399484720",
-        "claimSeq": "999",
-        "memberId": "MBR123456789",
-        "firstName": "Peter",
-        "lastName": "Chocolate",
-        "dob": "12312005",
-        "product": {
-            "productName": "nelox",
-            "productId": "12331313134"
-        },
-        "pricing": {
-            "cost": 99.99,
-            "fee": 5,
-            "due": 104.99,
-            "ucw": 115
+[
+    {
+        "claim":{
+            "claimNumber": "219233399484720",
+            "claimSeq": "999",
+            "memberId": "MBR123456789",
+            "firstName": "Peter",
+            "lastName": "Chocolate",
+            "dob": "12312005",
+            "product": {
+                "productName": "nelox",
+                "productId": "12331313134"
+            },
+            "pricing": {
+                "cost": 99.99,
+                "fee": 5,
+                "due": 104.99,
+                "ucw": 115
+            }
+        }
+    },
+    {
+        "claim":{
+            "claimNumber": "219233399484721",
+            "claimSeq": "999",
+            "memberId": "MBR123456789",
+            "firstName": "Peter",
+            "lastName": "Chocolate",
+            "dob": "12312005",
+            "product": {
+                "productName": "nelox",
+                "productId": "12331313134"
+            },
+            "pricing": {
+                "cost": 99.99,
+                "fee": 5,
+                "due": 104.99,
+                "ucw": 115
+            }
+        }
+    },
+    {
+        "claim":{
+            "claimNumber": "219233399484722",
+            "claimSeq": "999",
+            "memberId": "MBR123456789",
+            "firstName": "Peter",
+            "lastName": "Chocolate",
+            "dob": "12312005",
+            "product": {
+                "productName": "nelox",
+                "productId": "12331313134"
+            },
+            "pricing": {
+                "cost": 99.99,
+                "fee": 5,
+                "due": 104.99,
+                "ucw": 115
+            }
         }
     }
-}
+]
