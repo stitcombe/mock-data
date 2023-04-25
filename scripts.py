@@ -12,3 +12,8 @@ def test():
 def lint():
     subprocess.run(["ruff", "check", "."])
     subprocess.run(["black", "."])
+
+
+def scan():
+    subprocess.run(["safety", "check", "-r", "requirements.txt", "--full-report"])
+    subprocess.run(["bandit", "-c", "pyproject.toml", "-r", "."])

@@ -25,6 +25,7 @@ pytest-cov = "^4.0.0"
 app = 'scripts:app'
 test = 'scripts:test'
 lint = 'scripts:lint'
+scan = 'scripts:scan'
 
 [build-system]
 requires = ["poetry-core"]
@@ -65,3 +66,8 @@ exclude = [
     "coverage"
 ]
 target-version = "py311"
+
+[tool.bandit]
+exclude_dirs = ["tests"]
+# tests = ["B201", "B301"]
+# skips = ["B101", "B601"]
