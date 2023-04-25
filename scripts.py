@@ -1,19 +1,14 @@
 import subprocess
 
+
 def app():
-    subprocess.run(
-        ['python', './src/mock_data/main.py']
-    )
+    subprocess.run(["python", "./src/mock_data/main.py"])
+
 
 def test():
-    subprocess.run(
-        ['pytest']
-    )
-    subprocess.run(
-        ['coverage']
-    )
+    subprocess.run(["pytest"])
+
 
 def lint():
-    subprocess.run(
-        ['ruff', 'check', './src']
-    )
+    subprocess.run(["ruff", "check", "."])
+    subprocess.run(["black", "."])
