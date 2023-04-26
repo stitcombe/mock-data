@@ -32,6 +32,10 @@ for item in data:
         if "lastName" in claim:
             # De-identify the value of the 'firstName' key
             claim["lastName"] = function.deid_memberName(claim["lastName"])
+        # Check if the 'memberAge' key is present in the claim dictionary
+        if "memberAge" in claim:
+            # De-identify the value of the 'memberAge' key
+            claim["memberAge"] = function.deid_memberAge(claim["memberAge"])
         # Check if the 'DUR' key is present in the claim dictionary
         if "DUR" in claim:
             # De-identify the value of the 'DURConflictingClaim' key in each DUR item

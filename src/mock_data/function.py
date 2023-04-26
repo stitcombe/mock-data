@@ -58,3 +58,13 @@ def deid_memberName(value):
     # where n is the length of the input value
     deidentified_value = deidentified_value[: len(value)]
     return deidentified_value
+
+
+# Define a function to de-identify a member age
+def deid_memberAge(value):
+    if not isinstance(value, int):
+        raise AttributeError("Value must be a integer.")
+    if not value:
+        return value
+    # Return a zero value
+    return 0
