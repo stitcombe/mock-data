@@ -3,17 +3,16 @@ import function
 from root_dir import ROOT_DIR
 
 
-dob = "19900102"
-print(function.deid_memberDob(dob))
-
 # Define `files` folder  path
 files_dir = ROOT_DIR / "files"
 inputFile = files_dir / "claim_mock.json"
 outputFile = files_dir / "output.json"
 
+
 # Load the JSON file
 with open(inputFile, "r") as f:
     data = json.load(f)
+
 
 # Loop through each item in the JSON data
 for item in data:
@@ -28,6 +27,10 @@ for item in data:
         if "memberId" in claim:
             # De-identify the value of the 'memberId' key
             claim["memberId"] = function.deid_memberId(claim["memberId"])
+        # Check if the 'familyId' key is present in the claim dictionary
+        if "familyId" in claim:
+            # De-identify the value of the 'familyId' key
+            claim["familyId"] = function.deid_memberId(claim["familyId"])
         # Check if the 'firstName' key is present in the claim dictionary
         if "firstName" in claim:
             # De-identify the value of the 'firstName' key
@@ -44,6 +47,14 @@ for item in data:
         if "memberAge" in claim:
             # De-identify the value of the 'memberAge' key
             claim["memberAge"] = function.deid_memberAge(claim["memberAge"])
+        # Check if the 'PAMCNBR' key is present in the claim dictionary
+        if "PAMCNBR" in claim:
+            # De-identify the value of the 'PAMCNBR' key
+            claim["PAMCNBR"] = function.deid_prior_auth(claim["PAMCNBR"])
+        # Check if the 'PRAuthNbr' key is present in the claim dictionary
+        if "PRAuthNbr" in claim:
+            # De-identify the value of the 'PAMCNBR' key
+            claim["PRAuthNbr"] = function.deid_prior_auth(claim["PRAuthNbr"])
         # Check if the 'DUR' key is present in the claim dictionary
         if "DUR" in claim:
             # De-identify the value of the 'DURConflictingClaim' key in each DUR item

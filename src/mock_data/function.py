@@ -91,6 +91,7 @@ def deid_memberDob(value):
         raise ValueError("Returned memberDob value is not a valid date")
 
 
+# Define a function to validate a date string
 def is_valid_date(date_str):
     try:
         year = int(date_str[0:4])
@@ -100,3 +101,19 @@ def is_valid_date(date_str):
         return True
     except ValueError:
         return False
+
+
+# Define a function to de-identify a prior auth number
+def deid_prior_auth(value):
+    if not isinstance(value, str):
+        raise AttributeError("Value must be a string.")
+    if not value:
+        return value
+    # Add the salt to the original value
+    salted_value = salt + value
+    # Hash the salted value using SHA-256
+    hashed_value = hashlib.sha256(salted_value.encode()).hexdigest()
+    # Extract the first n characters of the hashed value,
+    # where n is the length of the input value
+    deidentified_value = hashed_value[: len(value)]
+    return deidentified_value

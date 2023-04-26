@@ -3,7 +3,8 @@
         "claim": {
             "claimNumber": "219233399484720",
             "claimSeq": "999",
-            "memberId": "MBR123456789",
+            "memberId": "MBR123456001",
+            "familyId": "MBR123456001",
             "firstName": "Peter",
             "lastName": "Chocolate",
             "memberBirthdate": "19910821",
@@ -41,7 +42,8 @@
         "claim": {
             "claimNumber": "219233399484721",
             "claimSeq": "999",
-            "memberId": "MBR123456789",
+            "memberId": "MBR123456002",
+            "familyId": "MBR123456002",
             "firstName": "Robby",
             "lastName": "Charles",
             "memberBirthdate": "19911011",
@@ -79,7 +81,8 @@
         "claim": {
             "claimNumber": "219233399484722",
             "claimSeq": "999",
-            "memberId": "MBR123456789",
+            "memberId": "MBR123456001",
+            "familyId": "MBR123456002",
             "firstName": "Peter",
             "lastName": "Coolio",
             "memberBirthdate": "19411101",
