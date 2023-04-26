@@ -1,6 +1,7 @@
 import hashlib
 import string
 import random
+import datetime
 
 # Define salt value
 salt = "".join(random.choices(string.ascii_letters + string.digits, k=5))
@@ -68,3 +69,34 @@ def deid_memberAge(value):
         return value
     # Return a zero value
     return 0
+
+
+# Define a function to de-identify a member date of birth
+def deid_memberDob(value):
+    if not isinstance(value, str):
+        raise AttributeError("Value must be a string.")
+    if not value:
+        return value
+    # Parse the string into year, month, day
+    year = value[:4]
+    value[4:6]
+    value[6:]
+    # Generate a random month, day
+    deidentified_month = str(random.randint(1, 12)).zfill(2)
+    deidentified_day = str(random.randint(1, 28)).zfill(2)
+    deidentified_value = year + deidentified_month + deidentified_day
+    if is_valid_date(deidentified_value) is True:
+        return deidentified_value
+    else:
+        raise ValueError("Returned memberDob value is not a valid date")
+
+
+def is_valid_date(date_str):
+    try:
+        year = int(date_str[0:4])
+        month = int(date_str[4:6])
+        day = int(date_str[6:8])
+        datetime.datetime(year=year, month=month, day=day)
+        return True
+    except ValueError:
+        return False

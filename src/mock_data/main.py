@@ -2,6 +2,10 @@ import json
 import function
 from root_dir import ROOT_DIR
 
+
+dob = "19900102"
+print(function.deid_memberDob(dob))
+
 # Define `files` folder  path
 files_dir = ROOT_DIR / "files"
 inputFile = files_dir / "claim_mock.json"
@@ -32,6 +36,10 @@ for item in data:
         if "lastName" in claim:
             # De-identify the value of the 'firstName' key
             claim["lastName"] = function.deid_memberName(claim["lastName"])
+        # Check if the 'memberBirthdate' key is present in the claim dictionary
+        if "memberBirthdate" in claim:
+            # De-identify the value of the 'memberBirthdate' key
+            claim["memberBirthdate"] = function.deid_memberDob(claim["memberBirthdate"])
         # Check if the 'memberAge' key is present in the claim dictionary
         if "memberAge" in claim:
             # De-identify the value of the 'memberAge' key
