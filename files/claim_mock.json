@@ -1,12 +1,18 @@
 [
     {
-        "claim":{
+        "claim": {
             "claimNumber": "219233399484720",
             "claimSeq": "999",
             "memberId": "MBR123456789",
             "firstName": "Peter",
             "lastName": "Chocolate",
-            "dob": "12312005",
+            "memberBirthdate": "19910821",
+            "memberAge": 50,
+            "PAMCNBR": "PA198283757",
+            "PRAuthNbr": "ATH19498877",
+            "Message": "",
+            "Message2": "",
+            "Message3": "",
             "product": {
                 "productName": "nelox",
                 "productId": "12331313134"
@@ -16,17 +22,35 @@
                 "fee": 5,
                 "due": 104.99,
                 "ucw": 115
-            }
+            },
+            "DUR": [
+                {
+                    "DRDSeqNumber": 1,
+                    "DURConflictingClaim": "223758975742345",
+                    "DURConflictingSeqNbr": 998
+                },
+                {
+                    "DRDSeqNumber": 2,
+                    "DURConflictingClaim": "233758975743424",
+                    "DURConflictingSeqNbr": 999
+                }
+            ]
         }
     },
     {
-        "claim":{
+        "claim": {
             "claimNumber": "219233399484721",
             "claimSeq": "999",
             "memberId": "MBR123456789",
-            "firstName": "Peter",
-            "lastName": "Chocolate",
-            "dob": "12312005",
+            "firstName": "Robby",
+            "lastName": "Charles",
+            "memberBirthdate": "19911011",
+            "memberAge": 45,
+            "PAMCNBR": "PA198283757",
+            "PRAuthNbr": "ATH19498877",
+            "Message": "",
+            "Message2": "",
+            "Message3": "",
             "product": {
                 "productName": "nelox",
                 "productId": "12331313134"
@@ -36,17 +60,35 @@
                 "fee": 5,
                 "due": 104.99,
                 "ucw": 115
-            }
+            },
+            "DUR": [
+                {
+                    "DRDSeqNumber": 1,
+                    "DURConflictingClaim": "223758975742345",
+                    "DURConflictingSeqNbr": 998
+                },
+                {
+                    "DRDSeqNumber": 2,
+                    "DURConflictingClaim": "233758975743424",
+                    "DURConflictingSeqNbr": 999
+                }
+            ]
         }
     },
     {
-        "claim":{
+        "claim": {
             "claimNumber": "219233399484722",
             "claimSeq": "999",
             "memberId": "MBR123456789",
             "firstName": "Peter",
-            "lastName": "Chocolate",
-            "dob": "12312005",
+            "lastName": "Coolio",
+            "memberBirthdate": "19411101",
+            "memberAge": 40,
+            "PAMCNBR": "PA198283767",
+            "PRAuthNbr": "ATH19498847",
+            "Message": "",
+            "Message2": "",
+            "Message3": "",
             "product": {
                 "productName": "nelox",
                 "productId": "12331313134"
@@ -56,7 +98,19 @@
                 "fee": 5,
                 "due": 104.99,
                 "ucw": 115
-            }
+            },
+            "DUR": [
+                {
+                    "DRDSeqNumber": 1,
+                    "DURConflictingClaim": "223758975742345",
+                    "DURConflictingSeqNbr": 998
+                },
+                {
+                    "DRDSeqNumber": 2,
+                    "DURConflictingClaim": "233758975743424",
+                    "DURConflictingSeqNbr": 999
+                }
+            ]
         }
     }
 ]

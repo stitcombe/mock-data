@@ -32,6 +32,15 @@ for item in data:
         if "lastName" in claim:
             # De-identify the value of the 'firstName' key
             claim["lastName"] = function.deid_memberName(claim["lastName"])
+        # Check if the 'DUR' key is present in the claim dictionary
+        if "DUR" in claim:
+            # De-identify the value of the 'DURConflictingClaim' key in each DUR item
+            for dur in claim["DUR"]:
+                if "DURConflictingClaim" in dur:
+                    dur["DURConflictingClaim"] = function.deid_claim(
+                        dur["DURConflictingClaim"]
+                    )
+
 
 # Write the updated JSON data to a file
 with open(outputFile, "w") as f:
