@@ -117,3 +117,14 @@ def deid_prior_auth(value):
     # where n is the length of the input value
     deidentified_value = hashed_value[: len(value)]
     return deidentified_value
+
+
+# Define a function to de-identify a message
+def deid_message(value):
+    if not isinstance(value, str):
+        raise AttributeError("Value must be a string.")
+    if not value:
+        return value
+    # Remove numeric characters from the string
+    deidentified_value = "".join([char for char in value if not char.isdigit()])
+    return deidentified_value

@@ -55,6 +55,18 @@ for item in data:
         if "PRAuthNbr" in claim:
             # De-identify the value of the 'PAMCNBR' key
             claim["PRAuthNbr"] = function.deid_prior_auth(claim["PRAuthNbr"])
+        # Check if the 'Message' key is present in the claim dictionary
+        if "Message" in claim:
+            # De-identify the value of the 'Message' key
+            claim["Message"] = function.deid_message(claim["Message"])
+        # Check if the 'Message' key is present in the claim dictionary
+        if "Message2" in claim:
+            # De-identify the value of the 'Message' key
+            claim["Message2"] = function.deid_message(claim["Message2"])
+        # Check if the 'Message' key is present in the claim dictionary
+        if "Message3" in claim:
+            # De-identify the value of the 'Message' key
+            claim["Message3"] = function.deid_message(claim["Message3"])
         # Check if the 'DUR' key is present in the claim dictionary
         if "DUR" in claim:
             # De-identify the value of the 'DURConflictingClaim' key in each DUR item
