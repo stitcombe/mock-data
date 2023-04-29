@@ -20,6 +20,7 @@ bandit = "^1.7.5"
 safety = "^2.3.5"
 pandas = "^2.0.0"
 pytest-cov = "^4.0.0"
+tqdm = "^4.65.0"
 
 [tool.poetry.scripts]
 app = 'scripts:app'

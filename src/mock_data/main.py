@@ -1,6 +1,7 @@
 import json
 import function
 from root_dir import ROOT_DIR
+from tqdm import tqdm
 
 
 # Define `files` folder  path
@@ -14,8 +15,8 @@ with open(inputFile, "r") as f:
     data = json.load(f)
 
 
-# Loop through each item in the JSON data
-for item in data:
+# Loop through each item in the JSON data and add a progress bar
+for item in tqdm(data, desc="Processing JSON data"):
     # Check if the 'claim' key is present in the item
     if "claim" in item:
         claim = item["claim"]
