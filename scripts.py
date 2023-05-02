@@ -2,7 +2,7 @@ import subprocess
 
 
 def app():
-    subprocess.run(["python", "./src/mock_data/main.py"])
+    subprocess.run(["python", "./src/mock_data/main_2.py"])
 
 
 def test():
